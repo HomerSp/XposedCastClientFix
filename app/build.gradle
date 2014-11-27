@@ -1,0 +1,23 @@
+apply plugin: 'android'
+
+android {
+    compileSdkVersion 'rovo89:Xposed Bridge APIs:19'
+    buildToolsVersion "21.1.0"
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 19
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            runProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+}
